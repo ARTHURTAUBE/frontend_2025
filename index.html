@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <pre> 
+unit uLetras;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
+  Dialogs, StdCtrls, ExtCtrls;
+
+type
+  TfrmLetras = class(TForm)
+    Bevel1: TBevel;
+    Label1: TLabel;
+    GroupBox1: TGroupBox;
+    GroupBox2: TGroupBox;
+    GroupBox3: TGroupBox;
+    rbtArial: TRadioButton;
+    rbtTimes: TRadioButton;
+    rbtWingding: TRadioButton;
+    rbtNormal: TRadioButton;
+    rbtNegrito: TRadioButton;
+    rbtItalico: TRadioButton;
+    rbtDez: TRadioButton;
+    rbt15: TRadioButton;
+    rbt20: TRadioButton;
+    procedure rbtArialClick(Sender: TObject);
+    procedure rbtWingdingClick(Sender: TObject);
+    procedure rbtTimesClick(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  frmLetras: TfrmLetras;
+
+implementation
+
+{$R *.dfm}
+
+procedure TfrmLetras.rbtArialClick(Sender: TObject);
+begin
+        Label1.Font.Name:= 'Arial';
+end;
+
+procedure TfrmLetras.rbtWingdingClick(Sender: TObject);
+begin
+        Label1.Font.Name:= 'Wingdings';
+end;
+
+procedure TfrmLetras.rbtTimesClick(Sender: TObject);
+begin
+    Label1.Font.Name:= 'Times New Roman';
+end;
+
+end.
+</pre>
+
+
+
+
+
+
+
+
+
+</body>
+</html>
